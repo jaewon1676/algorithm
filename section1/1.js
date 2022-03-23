@@ -10,10 +10,11 @@
 ▣ 출력예제 1
 5 */
 function solution(a, b, c){
-    let answer;
-    a>b ? answer=b : answer=a;
-    answer>c ? answer=c : answer=answer;
-    return answer
+    let arr = []
+    arr.push(a)
+    arr.push(b)
+    arr.push(c)
+    return Math.min(...arr)
 }
 
 console.log(solution(6, 5, 11));
