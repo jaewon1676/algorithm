@@ -24,14 +24,23 @@
 ▣ 출력예제 2
 3 */
 
+// function solution(n, arr){
+//     let answer = 0;
+//     for(let i = 0; i<arr.length; i++){
+//         if(arr[i]%10 == n){
+//             answer += 1
+//         }
+//     }
+//     return answer;
+// }
 function solution(n, arr){
-    let answer = 0;
-    for(let i = 0; i<arr.length; i++){
-        if(arr[i]%10 == n){
-            answer += 1
+    let cnt = 0;
+    for(let k of arr){
+        if (k % 10 == 3){
+            cnt+=1;
         }
     }
-    return answer;
+    return cnt;
 }
 arr = [25, 23, 11, 47, 53, 17, 33]
 console.log(solution(3, arr))
