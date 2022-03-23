@@ -11,14 +11,23 @@ ksekkset
 ▣ 출력예제 1
 kset */
 
-function solution(str){
-    let answer = ''
-    for (let i=0; i<str.length; i++){
-        str.indexOf(str[i])===i ? answer += str[i] : answer 
-        // indexOf 찾는 조건의 문자열의 첫번째 자리를 반환한다.
-    }
-    return answer
-}
+// function solution(str){
+//     let answer = ''
+//     for (let i=0; i<str.length; i++){
+//         str.indexOf(str[i])===i ? answer += str[i] : answer 
+//         // indexOf 찾는 조건의 문자열의 첫번째 자리를 반환한다.
+//     }
+//     return answer
+// }
 
 let str = 'ksekkset'
 console.log(solution(str))
+
+function solution(str){
+    let answer = ''
+    let set = new Set(str)
+    for (let key of set){
+        answer += key
+    }
+    return answer;
+}
